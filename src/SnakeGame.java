@@ -135,7 +135,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
     }
 
     private void addWalls() {
-        // Add internal walls
+        // Add some internal walls
         walls.add(new Tile(10, 10));
         walls.add(new Tile(10, 11));
         walls.add(new Tile(10, 12));
@@ -148,16 +148,6 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         walls.add(new Tile(21, 15));
         walls.add(new Tile(22, 15));
         walls.add(new Tile(23, 15));
-
-        // Add walls around the screen borders
-        for (int i = 0; i < boardWidth / tileSize; i++) {
-            walls.add(new Tile(i, 0)); // Top border
-            walls.add(new Tile(i, boardHeight / tileSize - 1)); // Bottom border
-        }
-        for (int i = 0; i < boardHeight / tileSize; i++) {
-            walls.add(new Tile(0, i)); // Left border
-            walls.add(new Tile(boardWidth / tileSize - 1, i)); // Right border
-        }
     }
 
     public void move() {
